@@ -24,8 +24,6 @@ function createGalleryItems(items) {
     .join("");
 }
 
-// ===============================================================================
-
 function onPictureClick(event) {
   event.preventDefault();
 
@@ -52,32 +50,3 @@ function closeModalOnEscBtn(instance) {
     }
   }
 }
-
-// 2-й варіант ===========================================================================
-
-// function onPictureClick(event) {
-//   event.preventDefault();
-
-//   if (!event.target.classList.contains("gallery__image")) {
-//     return;
-//   }
-
-//   const modal = basicLightbox.create(`
-//       <img src="${event.target.dataset.source}" width="800" height="600">
-//   `);
-
-//   modal.show();
-
-//   const visible = modal.visible();
-
-//   if (visible) {
-//     window.addEventListener("keydown", onEscBtn);
-
-//     function onEscBtn(event) {
-//       if (event.code === "Escape") {
-//         modal.close();
-//         window.removeEventListener("keydown", onEscBtn);
-//       }
-//     }
-//   }
-// }
